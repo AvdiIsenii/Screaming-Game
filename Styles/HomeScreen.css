@@ -1,0 +1,90 @@
+﻿.body-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	font-family: 'Arial', sans-serif;
+	color: white;
+	overflow: hidden;
+	background-color: rgb(45, 45, 45);
+}
+
+.title {
+	font-size: 65px;
+	font-weight: bold;
+	position: absolute;
+	top: 70px;
+	text-align: center;
+	width: 100%;
+	animation: moveUpDown 2s ease-in-out infinite alternate;
+}
+
+@keyframes moveUpDown {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+.button {
+	padding: 15px 30px;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	background-color: #007BFF;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+	animation: glowButton 1.5s infinite alternate;
+}
+
+	.button:hover {
+		background-color: #0056b3;
+		transform: translateY(-5px);
+		box-shadow: 0 0 25px rgba(0, 123, 255, 0.9);
+	}
+
+	.button:focus {
+		outline: none;
+	}
+
+	.button:active {
+		transform: scale(0.95); /* Make the button slightly smaller */
+		background-color: #007BFF;
+		box-shadow: 0 0 15px rgba(0, 123, 255, 0.7); /* Subtle shadow effect */
+	}
+
+@keyframes glowButton {
+	0% {
+		box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+	}
+
+	100% {
+		box-shadow: 0 0 25px rgba(0, 123, 255, 0.9);
+	}
+}
+
+
+@keyframes slideRight {
+	from {
+		right: 0px;
+	}
+
+	to {
+		right: 100vw; /* or a larger value to ensure it moves off-screen */
+	}
+}
